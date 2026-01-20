@@ -1,5 +1,5 @@
 {
-  "name": "online-resume",
+  "name": "website-portfolio",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -8,16 +8,16 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/tsunam-1/online-resume.git"
+    "url": "git+https://github.com/tsunam-1/website-portfolio"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "module",
   "bugs": {
-    "url": "https://github.com/tsunam-1/online-resume/issues"
+    "url": "https://github.com/tsunam-1/website-portfolio/issues"
   },
-  "homepage": "https://github.com/tsunam-1/online-resume#readme",
+  "homepage": "https://github.com/tsunam-1/website-portfolio#readme",
   "dependencies": {
     "ejs": "^4.0.1",
     "express": "^5.2.1"
