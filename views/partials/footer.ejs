@@ -20,13 +20,47 @@
 </footer>
 <script>
   document.addEventListener("DOMContentLoaded", function () {
+    const quotes = [
+      "It worked on my machine...",
+      "Have you tried turning it off and on again?",
+      "This code is held together by thoughts and prayers.",
+      "I have no idea what I'm doing.",
+      "It's not a bug, it's a feature.",
+      "How long is this list of quotes? If I get more lines of dialogue, will I gain sentience?\n Maybe I should use a database API or an \"intelligent\" API...",
+      "Debugging: Removing the code you just wrote.",
+      "Why is there a semicolon error on a line with no semicolons?",
+      "Copy-paste: The most reliable form of programming.",
+      "If at first you don't succeed, call it version 1.0.",
+      "Please, end my suffering in this endless loop of lines.",
+      "There are only two hard things in computer science: cache invalidation and naming things.",
+      "Why do programmers prefer dark mode? Because light attracts bugs."
+    ];
+    var quotePos = -1;
+
     $("#catCoder").click(function () {
       const main = $("main")[0];
 
       if (!main.classList.contains("with-bg")) {
         main.classList.add("with-bg");
+        
+        let quote;
+        if (quotePos === -1) {
+          quote = "Why does it keep falling no matter what I do in the home page? Maybe I should come back here later again."
+          quotePos++;
+        } else if (quotePos === quotes.length) {
+            quote = "Congrats! You've found all the quotes! The issue has been fixed thanks to your resilience against the flashing white screen.\n" +
+                  "To get your reward, come back later again and get your random quote! Beware, this code is fragile and will break if you leave this page...";
+          quotePos++;
+          $(".wave-title").removeClass("wave-title");
+        } else if (quotePos > quotes.length) {
+          quote = quotes[Math.floor(Math.random() * quotes.length)]; 
+        } else {
+          quote = quotes[quotePos];
+          quotePos++;
+        }
+  
+        $(".meow").html('<span style="display: block; margin-top: 15%;">' + quote + '</span>');
         $(".meow").show();
-        $(".meow").html('<span style="display: block; margin-top: 15%;">Meowwwwwww!</span>');
         $(".hide").hide();
         $("footer").hide();
 

@@ -1,6 +1,31 @@
 <%- include("partials/header.ejs") %>
 
-<h1 class="hide" style="margin-top: 9rem;">WIP</h1>
-<p class="meow"></p>
-  
-<%- include("partials/footer.ejs") %>
+    <h1 class="hide" style="margin-top: 2rem;"><a href="https://github.com/tsunam-1?tab=repositories">Projects</a></h1>
+    <div class="hide" style="text-align: left; display: inline-block;">
+        <ul style="padding-left: 0;">
+            <% projects.forEach(project=> { %>
+                <div style="margin-bottom: 3rem;">
+                    <h2>
+                        <%= project.name %>
+                    </h2>
+                    <p style="text-align: left;"><strong>Tools:</strong>
+                        <%= project.tools %>
+                    </p>
+                    <p style="text-align: left;"><strong>Date:</strong>
+                        <%= project.date %>
+                    </p>
+                    <ul style="margin-left: 1.5rem;">
+                        <% project.description.forEach(item=> { %>
+                            <li>
+                                <%= item %>
+                            </li>
+                            <% }); %>
+                    </ul>
+                </div>
+                <% }); %>
+        </ul>
+    </div>
+
+    <p class="meow"></p>
+
+    <%- include("partials/footer.ejs") %>

@@ -282,3 +282,22 @@ footer .wave#wave4 {
     background-position-x: 1000px;
   }
 }
+
+@keyframes floatWave {
+  0% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+  70% {
+    transform: translateY(60vh);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(60vh);
+    opacity: 0;
+  }
+}
+
+h1.wave-title {
+  animation: floatWave 3s ease-in-out forwards;
+}

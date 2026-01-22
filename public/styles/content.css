@@ -1,6 +1,7 @@
 html,
 body {
   height: 100%;
+  overflow-x: hidden;
 }
 
 body {
@@ -99,6 +100,10 @@ main.with-bg {
   width: 100%;
   height: 80vh;
   border: none;
+}
+
+.meow {
+  white-space: pre-line;
 }
 
 .white-text {
