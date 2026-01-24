@@ -34,7 +34,7 @@ const projectsSection = sections['Projects'];
 const projects = [];
 
 // Match each project heading and its content
-const projectRegex = /\\resumeProjectHeading\s*\{\\textbf\{([^}]+)\}\s*\$\|\$\s*\\emph\{([^}]+)\}\}\{([^}]+)\}\s*\\resumeItemListStart([\s\S]*?)\\resumeItemListEnd/g;
+const projectRegex = /\\resumeProjectHeading\s*\{\\textbf\{([^}]+)\}(?:\s*\\href\{[^}]+\}\{[^}]+\})?\s*\$\|\$\s*\\emph\{([^}]+)\}\}\{([^}]+)\}\s*\\resumeItemListStart([\s\S]*?)\\resumeItemListEnd/g;
 
 for (const match of projectsSection.matchAll(projectRegex)) {
   const name = cleanLatex(match[1]);
